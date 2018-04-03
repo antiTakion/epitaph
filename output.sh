@@ -72,11 +72,12 @@ do
 	#	echo foi2
 		if [[ "$a" -eq 0 ]];
 		then
-			com="$(xrandr --output ${ar[$i]} --auto --right-of $main --scale-from ${ar[$i]})"
+			com="$(xrandr --output ${ar[$i]} --auto --right-of $main --scale-from ${ar2[$i]})"
 	#		echo eh1
 		else
-			com="$(xrandr --output ${ar[$i]} --auto --left-of $main --scale-from ${ar[$i]})"
+			com="$(xrandr --output ${ar[$i]} --auto --left-of $main --scale-from ${ar2[$i]})"
 	#		echo eh2
+			echo "${ar[$i]}"
 		fi
 	#	echo ${ar[$i]}
 		a=$[$a+1]
